@@ -7,17 +7,11 @@ This is a simple Hangman game built with **JavaScript**, **HTML**, and **CSS**. 
 
 ## 🚀 Features
 - Random word selection from a predefined list.
-- 
 - Input validation: only single letters (A-Z) are accepted.
-- 
 - Displays the current guessed word state.
-- 
 - Displays the list of guessed letters.
-
 - Updates the hangman image on incorrect guesses.
-- 
 - Win and lose messages.
-- 
 - Restart button to play again.
 
 ---
@@ -52,7 +46,13 @@ If letter in word:
 - Show "Good guess!" message
 Else:
 - Increment incorrectGuesses
-
+- Show "Wrong guess!" message
+↓
+updateDisplay()
+↓
+checkGameStatus()
+→ If guessedWord is complete → Win message → endGame()
+→ If incorrectGuesses >= maxIncorrectGuesses → Lose message → endGame()
   
 ---
 
@@ -65,25 +65,13 @@ Else:
 
 ## 💡 Possible Improvements
 
-- Add more words or use a word API.
-  
+- Add more words or use a word API. 
 - Allow the player to guess the entire word.
-  
 - Add categories (e.g. animals, countries, movies).
-  
 - Improve the UI with animations or sounds.
-  
 - Track player statistics (wins/losses).
 
 
 ## ⚠️ License
 
 This project is for educational purposes. You can modify and use it as you like.
-
-- Show "Wrong guess!" message
-↓
-updateDisplay()
-↓
-checkGameStatus()
-→ If guessedWord is complete → Win message → endGame()
-→ If incorrectGuesses >= maxIncorrectGuesses → Lose message → endGame()
